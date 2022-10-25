@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 nav {
     font-family: 'Poppins', sans-serif;
@@ -25,8 +25,58 @@ nav {
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    font-family: 'Lobster', cursive;
 }
 
+.middlePart {
+    border-radius: 12px;
+    height: 90%;
+    max-width: 60vw;
+    background-color: #070618;
+    /* border: 3px solid red; */
+
+}
+.middlePartRow{
+    height: 100%;
+}
+.firstCol{
+    border: 3px solid green;
+    height: 100%;
+    
+}
+.secondCol{
+    border: 3px solid red;
+    height: 100%;
+}
+.songsList{
+    height: 88%;
+    overflow-x:auto;
+    overflow-y: scroll;
+}
+.songsList::-webkit-scrollbar{
+    display: none;
+}
+.songInfo{
+    background-color: white;
+    color: black;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 8px 0;
+    font-size: 18px;
+    border-radius: 12px;
+    margin: .8rem 0;
+}
+.durationPlay{
+    display: flex;
+    /* width: 5rem; */
+    min-width: 5rem;
+    align-items: center;
+    justify-content: space-between;
+    
+}
 .bottom {
     position: absolute;
     bottom: 0;
@@ -42,7 +92,26 @@ nav {
 #myProgressBar {
     width: 80vw;
 }
-.icons i{
+
+.icons i {
     color: white;
     margin: 5px;
 }
+
+.gif {
+    position: absolute;
+    left: 10vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+.gif img {
+    width: 50px;
+}
+
+.musicName {
+    margin-left: .5rem;
+}
+
