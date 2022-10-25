@@ -70,10 +70,10 @@ nav {
     background-color: white;
     color: black;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-    padding: 8px 0;
-    font-size: 18px;
+    padding: 8px 1rem;
+    font-size: 22px;
     border-radius: 12px;
     margin: .8rem 0;
 }

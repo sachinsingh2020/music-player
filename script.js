@@ -15,6 +15,24 @@ let songs = [
 ]
 
 // MIDDLE CONTAINER FUNCTIONALITY 
+let songsList=document.querySelector('.songsList');
+songs.forEach((song)=>{
+    songsList.innerHTML+=`   <div class="songInfo">
+    <div class="songsName">${song.songName}</div>
+    <div class="durationPlay">
+        <div class="songDuration">${song.timeDuration}</div>
+        <i class=" songPlay fa-regular fa-circle-play"></i>
+    </div>
+</div>`
+})
+songsList.innerHTML+=`   <div class="songInfo">
+<div class="songsName">Ek Tarfa Reprise</div>
+<div class="durationPlay">
+    <div class="songDuration">03:56</div>
+    <i class=" songPlay fa-regular fa-circle-play"></i>
+</div>
+</div>`;
+
 
 
 
