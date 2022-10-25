@@ -5,8 +5,8 @@ let totalSongs = 7;
 let masterPlay = document.getElementById('masterPlay');
 let myProgressBar = document.getElementById('myProgressBar');
 let gifImage = document.getElementById('gifImage');
-let secondColImage=document.getElementById('secondColImage');
-let musicName=document.getElementById('musicName');
+let secondColImage = document.getElementById('secondColImage');
+let musicName = document.getElementById('musicName');
 let songs = [
     { songIndex: 0, songName: "Ek Tarfa Reprise", filePath: "./songs/1.mp3", coverPath: "./covers/1.png", timeDuration: "03:56" },
     { songIndex: 1, songName: "Ek Vari Aa", filePath: "./songs/2.mp3", coverPath: "./covers/2.png", timeDuration: "04:34" },
@@ -46,6 +46,8 @@ songPlay.forEach((element) => {
             masterPlay.classList.add('fa-circle-play');
             audioElement.pause();
             lock = e.target.id;
+            gifImage.src = "playing2.png";
+
         }
         else {
             if (lock == e.target.id) {
@@ -54,20 +56,23 @@ songPlay.forEach((element) => {
                 e.target.classList.add('fa-circle-pause');
                 masterPlay.classList.remove('fa-circle-play');
                 masterPlay.classList.add('fa-circle-pause');
+                gifImage.src = "playing.gif";
             }
             else {
                 makeAllPlay();
                 mainSongIndex = parseInt(e.target.id);
                 // console.log(songId);
                 audioElement.src = songs[mainSongIndex].filePath;
-                secondColImage.src=songs[mainSongIndex].coverPath;
-                musicName.innerText=songs[mainSongIndex].songName;
+                secondColImage.src = songs[mainSongIndex].coverPath;
+                musicName.innerText = songs[mainSongIndex].songName;
                 e.target.classList.remove("fa-circle-play");
                 e.target.classList.add("fa-circle-pause");
                 audioElement.play();
+                gifImage.src = "playing.gif";
                 masterPlay.classList.remove('fa-circle-play');
                 masterPlay.classList.add('fa-circle-pause');
                 mainSongIndex = songId;
+
                 lock = 0;
             }
         }
@@ -85,7 +90,7 @@ forwardButton.addEventListener('click', (e) => {
         mainSongIndex = 0;
     audioElement.src = songs[mainSongIndex].filePath;
     audioElement.play();
-    secondColImage.src=songs[mainSongIndex].coverPath;
+    secondColImage.src = songs[mainSongIndex].coverPath;
     document.getElementById(previousIndex).classList.remove('fa-circle-pause');
     document.getElementById(previousIndex).classList.add('fa-circle-play');
     document.getElementById(mainSongIndex).classList.remove('fa-circle-play');
@@ -100,14 +105,14 @@ previousButton.addEventListener('click', (e) => {
         mainSongIndex = totalSongs - 1;
     else
         mainSongIndex -= 1;
-    
-        audioElement.src=songs[mainSongIndex].filePath;
-        audioElement.play();
-        secondColImage.src=songs[mainSongIndex].coverPath;
-        document.getElementById(previousIndex).classList.remove('fa-circle-pause');
-        document.getElementById(previousIndex).classList.add('fa-circle-play');
-        document.getElementById(mainSongIndex).classList.remove('fa-circle-play');
-        document.getElementById(mainSongIndex).classList.add('fa-circle-pause');
+
+    audioElement.src = songs[mainSongIndex].filePath;
+    audioElement.play();
+    secondColImage.src = songs[mainSongIndex].coverPath;
+    document.getElementById(previousIndex).classList.remove('fa-circle-pause');
+    document.getElementById(previousIndex).classList.add('fa-circle-play');
+    document.getElementById(mainSongIndex).classList.remove('fa-circle-play');
+    document.getElementById(mainSongIndex).classList.add('fa-circle-pause');
 })
 
 
