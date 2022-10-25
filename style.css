@@ -35,58 +35,69 @@ nav {
     height: 90%;
     max-width: 60vw;
     background-color: #070618;
+    display: flex;  
+    flex-direction: column;
     /* border: 3px solid red; */
 
 }
-.middlePartRow{
+
+.middlePartRow {
     height: 100%;
+    display: flex ;  
 }
-.firstCol{
-    height: 100%;   
-    
+
+.firstCol {
+    height: 100%;
+
 }
-.secondCol{
+
+.secondCol {
     height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
-.secondCol img{
+
+.secondCol img {
     width: 100%;
     padding: 0 1rem;
     border: 3px solid rgb(34, 33, 33);
     border-radius: 40px;
 }
-.songsList{
+
+.songsList {
     height: 88%;
-    overflow-x:auto;
-    overflow-y: scroll;
+    overflow-x: auto;
+    /* overflow-y: scroll; */
 }
-.songsList::-webkit-scrollbar{
+
+.songsList::-webkit-scrollbar {
     display: none;
 }
-.songInfo{
+
+.songInfo {
     background-color: white;
     color: black;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 8px 1rem;
-    font-size: 22px;
+    font-size: 20px;
     border-radius: 12px;
     margin: .8rem 0;
 }
 
 
-.durationPlay{
+.durationPlay {
     display: flex;
     /* width: 5rem; */
     min-width: 5rem;
     align-items: center;
     justify-content: space-between;
-    
+
 }
+
 .bottom {
     position: absolute;
     bottom: 0;
@@ -96,10 +107,11 @@ nav {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: center;    
 }
 
 #myProgressBar {
+    margin-top: .5rem;
     width: 80vw;
 }
 
@@ -121,7 +133,48 @@ nav {
     width: 50px;
 }
 
-.musicName {
+#musicName {
     margin-left: .5rem;
 }
 
+@media (max-width:768px) {
+     .secondCol{
+        display: none;
+     }
+}
+@media (max-width:720px) {
+    #myprogressBar{
+        margin-top: .4rem;
+    }
+    .bottom{
+        border: 3px solid white;
+        /* flex-direction: column; */
+        /* justify-content: center; */
+        /* align-items: center; */
+        height: 6rem;
+    }
+    .icons{
+        margin-bottom: -.2rem;
+        border: 3px solid purple;
+    }
+    .gif {
+        position: relative;
+        border: 3px solid pink;
+        
+
+    }
+}
+@media (max-width:575px) {
+    .middlePart {
+        max-width: 85vw;
+    
+    }
+    .durationPlay{
+        min-width: 4rem;
+    }
+}
+@media (max-width:465px) {
+    .songInfo{
+        font-size: 17px;
+    }
+}
