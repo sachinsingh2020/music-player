@@ -4,6 +4,34 @@ let audioElement = new Audio("./songs/1.mp3"); ''
 let masterPlay = document.getElementById('masterPlay');
 let myProgressBar = document.getElementById('myProgressBar');
 let gifImage = document.getElementById('gifImage');
+let songs = [
+    { songName: "Ek Tarfa Reprise", filePath: "./songs/1.mp3", coverPath: "./covers/1.png", timeDuration: "03:56" },
+    { songName: "Ek Vari Aa", filePath: "./songs/2.mp3", coverPath: "./covers/2.png", timeDuration: "04:34" },
+    { songName: "Phir Wahi", filePath: "./songs/3.mp3", coverPath: "./covers/3.png", timeDuration: "04:13" },
+    { songName: "Qaafirana", filePath: "./songs/4.mp3", coverPath: "./covers/4.png", timeDuration: "05:41" },
+    { songName: "Sau Aasman", filePath: "./songs/5.mp3", coverPath: "./covers/5.png", timeDuration: "03:54" },
+    { songName: "Tenu Na Bol Pawaan", filePath: "./songs/6.mp3", coverPath: "./covers/6.png", timeDuration: "04:55" },
+    { songName: "Mere Liye Tum Kafi Ho", filePath: "./songs/7.mp3", coverPath: "./covers/7.png", timeDuration: "02:12" },
+]
+
+// MIDDLE CONTAINER FUNCTIONALITY 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// BOTTOM DIV FUNCTIONALITY 
 
 masterPlay.addEventListener('click', () => {
     if (audioElement.paused || audioElement.currentTime <= 0) {

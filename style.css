@@ -42,13 +42,21 @@ nav {
     height: 100%;
 }
 .firstCol{
-    border: 3px solid green;
-    height: 100%;
+    height: 100%;   
     
 }
 .secondCol{
-    border: 3px solid red;
     height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.secondCol img{
+    width: 100%;
+    padding: 0 1rem;
+    border: 3px solid rgb(34, 33, 33);
+    border-radius: 40px;
 }
 .songsList{
     height: 88%;
@@ -69,6 +77,8 @@ nav {
     border-radius: 12px;
     margin: .8rem 0;
 }
+
+
 .durationPlay{
     display: flex;
     /* width: 5rem; */
