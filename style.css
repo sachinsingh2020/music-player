@@ -155,12 +155,10 @@ nav {
     }
     .icons{
         margin-bottom: -.2rem;
-        border: 3px solid purple;
     }
     .gif {
         position: relative;
-        border: 3px solid pink;
-        
+        margin-right: 19%;
 
     }
 }
